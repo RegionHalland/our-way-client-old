@@ -56,7 +56,12 @@ let colors = {
   'grey-lightest': '#FCFCFE',
   'white': '#ffffff',
 
-  'red': '#F55D48',
+  'blue-darker': '#05242D',
+  'blue-dark': '#123843',
+  'blue': '#1B4350',
+  'blue-light': '#3B6471',
+  'blue-lighter': '#85A3AC',
+  'blue-lightest': '#B9D7E0',
 }
 
 module.exports = {
@@ -666,7 +671,7 @@ module.exports = {
   shadows: {
     default: '0 2px 4px 0 rgba(0,0,0,0.10)',
     'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
+    'lg': '0 15px 20px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.05)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'none': 'none',
   },

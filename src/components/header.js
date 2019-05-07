@@ -3,18 +3,22 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header>
-  	<div className="px-3 py-1 bg-grey flex md:justify-end">
-  		<a className="md:ml-3 text-sm" href="#">Cookies</a>
-  		<a className="md:ml-3 text-sm" href="#">Om oss</a>
+  	<div className="bg-blue">
+      <div className="py-1 md:py-2 px-3 wrapper flex md:justify-end">
+  		  <a className="md:ml-3 text-sm no-underline text-grey-light" href="#">Cookies</a>
+  		  <a className="md:ml-3 text-sm no-underline text-grey-light" href="#">Om oss</a>
+      </div>
   	</div>
-  	<div className="px-3 py-3 flex flex-col md:flex-row md:justify-between">
-	  	<Link className="no-underline text-black" to="/">
-	  		<h1 className="font-semibold text-xl">Visithalland.com</h1>
-	  	</Link>
-	  	<nav>
-	    	<Link className="md:ml-3" to="/NewsPage/">Nyheter</Link>
-	    	<Link className="md:ml-3" to="/EventsPage/">Evenemang</Link>
-	    </nav>
+    <div className="shadow-lg z-50 relative">
+    	<div className="px-3 py-5 flex flex-col md:items-center md:flex-row md:justify-between wrapper">
+  	  	<Link className="no-underline text-black mb-3 md:mb-0" to="/">
+  	  		<h1 className="font-semibold text-xl">Visithalland.com</h1>
+  	  	</Link>
+  	  	<nav>
+  	    	<Link activeClassName="text-blue-lighter" className="mr-3 md:mr-0 md:ml-6 text-black no-underline font-semibold" to="/NewsPage/">Nyheter</Link>
+  	    	<Link activeClassName="text-blue-lighter" className="mr-3 md:mr-0 md:ml-6 text-black no-underline font-semibold" to="/EventsPage/">Evenemang</Link>
+  	    </nav>
+      </div>
     </div>
   </header>
 )
