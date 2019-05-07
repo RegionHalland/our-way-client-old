@@ -7,7 +7,7 @@ const EventListItem = () => (
 		<span className="text-lg font-semibold">21/07</span>
 	</div>
 	<div className="mb-3 md:mb-0 w-full md:w-8/12">
-		<h3 className="text-2xl">Mikael Ahlerup – Led dig själv innan du leder andra</h3>
+		<h3 className="text-xl md:text-2xl leading-normal">Mikael Ahlerup – Led dig själv innan du leder andra</h3>
 	</div>
 	<div className="mb-3 md:mb-0 w-full md:w-3/12 md:text-right">
 		<Link className="text-black font-semibold" to="/EventSingle/">Gå till event</Link>

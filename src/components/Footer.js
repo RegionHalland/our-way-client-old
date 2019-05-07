@@ -14,20 +14,20 @@ const Header = () => (
       <div className="w-full md:w-6/12">
         <div className="flex flex-wrap flex-col md:flex-row justify-end">
           <div className="w-full md:w-6/12 mb-8">
-            <h4 className="text-blue-lightest text-xl mb-4">Sidor</h4>
+            <h4 className="text-blue-lightest text-lg mb-4">Sidor</h4>
             <ul className="list-reset">
-              <li className="text-white text-xl font-semibold mb-3">Kunskap</li>
-              <li className="text-white text-xl font-semibold mb-3">Kunskap</li>
-              <li className="text-white text-xl font-semibold mb-3">Kunskap</li>
-              <li className="text-white text-xl font-semibold mb-3">Kunskap</li>
-              <li className="text-white text-xl font-semibold mb-3">Kunskap</li>
+              <li className="text-white text-lg font-semibold mb-3">Kunskap</li>
+              <li className="text-white text-lg font-semibold mb-3">Kunskap</li>
+              <li className="text-white text-lg font-semibold mb-3">Kunskap</li>
+              <li className="text-white text-lg font-semibold mb-3">Kunskap</li>
+              <li className="text-white text-lg font-semibold mb-3">Kunskap</li>
             </ul>
           </div>
           <div className="w-full md:w-6/12 mb-8">
-            <h4 className="text-blue-lightest text-xl mb-4">Följ oss</h4>
+            <h4 className="text-blue-lightest text-lg mb-4">Följ oss</h4>
             <ul className="list-reset">
-              <li className="text-white text-xl font-semibold mb-3">Facebook</li>
-              <li className="text-white text-xl font-semibold mb-3">Instagram</li>
+              <li className="text-white text-lg font-semibold mb-3">Facebook</li>
+              <li className="text-white text-lg font-semibold mb-3">Instagram</li>
             </ul>
           </div>
         </div>
