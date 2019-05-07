@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import LandingHero from "../components/LandingHero"
 import AreaCollection from "../components/AreaCollection"
