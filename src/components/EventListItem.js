@@ -5,6 +5,7 @@ const EventListItem = () => (
   <div className="flex flex-wrap w-full px-3 py-4 bg-grey-lighter mb-2">
 	<span>21/07</span>
 	<h3>Title</h3>
+	<Link to="EventPage">Gå till event</Link>
   </div>
 )
 
