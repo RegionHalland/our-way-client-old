@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 const LandingHero = () => (
-  <div className="flex flex-wrap mb-6">
+  <div className="flex flex-wrap mb-8">
 	 <div className="w-full md:w-7/12 bg-grey-lighter">
 		{/* TODO: Insert background image */}
 	 </div>
