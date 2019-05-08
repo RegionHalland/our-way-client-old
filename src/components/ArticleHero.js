@@ -1,8 +1,11 @@
- import React from "react"
+import React from "react"
 import { Link } from "gatsby"
 
+import styled from 'styled-components'
+import { darken } from 'polished'
+
 const ArticleHero = ({title, date, link, label, image}) => (
-	<div className="py-8 md:py-12 bg-blue-dark">
+	<HeroEvent className="py-8 md:py-12 bg-blue-dark">
 		<div className="wrapper">
 			<div className="px-3">
 				<span className="text-grey-light mb-2 block">{date}</span>
@@ -10,7 +13,16 @@ const ArticleHero = ({title, date, link, label, image}) => (
 				<Link className="text-white font-semibold" to="/EventSingle/">{label}</Link>
 			</div>
 		</div>
-	</div>
+	</HeroEvent>
 )
+
+
+const HeroEvent = styled.div`
+	background: #123843;
+	transition:background 0.25s;
+	&:hover {
+		background: ${darken(0.02, '#123843')};
+	}
+`
 
 export default ArticleHero
