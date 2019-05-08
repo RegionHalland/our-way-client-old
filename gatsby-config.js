@@ -104,6 +104,7 @@ module.exports = {
           "**/news",
           "**/event",
           "**/area",
+          "**/users",
           "/wp-api-menus/**"
         ],
         // Blacklisted routes using glob patterns
