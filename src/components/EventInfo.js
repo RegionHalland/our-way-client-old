@@ -1,17 +1,17 @@
 import React from "react"
 
 const EventInfo = () => (
-  <div>
+  <div className="p-6 bg-grey-lighter sticky pin-t rounded">
     <ul className="list-reset">
-      <li className="mb-3">
+      <li className="mb-6 text-lg">
         <span className="font-semibold mr-2">Tid:</span>
         <span className="font-semibold">11:00 - 12:00</span>
       </li>
-      <li className="mb-3">
+      <li className="mb-6 text-lg">
         <span className="font-semibold mr-2">Plats:</span>
         <span className="font-semibold">Varbergs kusthotell</span>
       </li>
-      <li className="mb-3">
+      <li className="mb-6 text-lg">
         <span className="font-semibold mr-2">Datum:</span>
         <span className="font-semibold">21/08/19</span>
       </li>
