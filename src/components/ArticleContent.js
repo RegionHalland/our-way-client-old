@@ -2,7 +2,7 @@ import React from "react"
 import styled from 'styled-components'
 
 const ArticleContent = ({content}) => (
-  <ArticleContentInner className="text-grey-darkest leading-normal">
+  <ArticleContentInner className="text-grey-darkest leading-relaxed">
 	{content}
   </ArticleContentInner>
 )

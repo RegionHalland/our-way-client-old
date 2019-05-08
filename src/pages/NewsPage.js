@@ -10,7 +10,7 @@ const NewsPage = () => (
     <SEO title="Nyheter" />
     <ArticleHero title="Kattegattleden utsedd till Europas bästa cykelled" label="Läs mer" date="27/09/19" />
 	<div className="px-3 pt-8 wrapper mb-12">
-		<NewsCollection title="Alla nyheter" />
+		<NewsCollection title="Fler nyheter" />
 	</div>
   </Layout>
 )

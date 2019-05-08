@@ -11,7 +11,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`Visithalland`]} />
     <LandingHero />
-    <div className="px-3 wrapper mb-12">
+    <div className="px-3 wrapper mb-8">
 		<AreaCollection />
 	</div>
 	<div className="mb-12 bg-grey-lighter py-8">
