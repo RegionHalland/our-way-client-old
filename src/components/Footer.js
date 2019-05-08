@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 
-const Header = () => (
+const Footer = () => (
   <footer className="bg-blue-dark pt-8 pb-8 md:pb-16">
     <div className="px-3 wrapper flex flex-wrap flex-col md:flex-row md:justify-between">
       <div className="w-full md:w-4/12 mb-8">
@@ -36,4 +36,4 @@ const Header = () => (
   </footer>
 )
 
-export default Header
+export default Footer
