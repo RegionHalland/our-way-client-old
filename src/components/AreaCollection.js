@@ -1,8 +1,6 @@
 import React from "react"
 import AreaThumbnail from "./AreaThumbnail"
 
-import styled from "styled-components"
-
 const AreaCollection = () => (
 	<React.Fragment>
 		<span className="font-semibold text-lg block mb-2 text-blue-lighter">Välkommen.</span>

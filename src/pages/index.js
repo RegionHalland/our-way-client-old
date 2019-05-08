@@ -14,8 +14,10 @@ const IndexPage = () => (
     <div className="px-3 wrapper mb-12">
 		<AreaCollection />
 	</div>
-	<div className="px-3 wrapper mb-12">
-		<EventCollection title="Evenemang" />
+	<div className="mb-12 bg-grey-lighter py-8">
+		<div className="px-3 wrapper">
+			<EventCollection title="Evenemang" />
+		</div>
 	</div>
 	<div className="px-3 wrapper mb-12">
 		<NewsCollection title="Nyheter" />
