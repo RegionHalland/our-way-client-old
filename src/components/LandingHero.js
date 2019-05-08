@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import React from "react"
 
 import styled from 'styled-components'
+import { darken } from 'polished'
+
 
 const LandingHero = () => (
   <div className="flex flex-wrap mb-8">
@@ -10,19 +12,35 @@ const LandingHero = () => (
 		<HeroTitle className="text-3xl md:text-4xl leading-tight lg:text-5xl text-white">Välkommen till oss <br/>på Visithalland</HeroTitle>
 	 </div>
 	 <div className="w-full md:w-5/12">
-		<div className="px-3 md:px-6 py-8 md:py-12 bg-blue-dark">
+		<HeroNews className="px-3 md:px-6 py-8 md:py-12 bg-blue-dark">
 			<span className="text-grey-light mb-2 block">2019/08/18</span>
 			<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">Kattegattleden utsedd till Europas bästa cykelled</h3>
 			<Link className="text-white font-semibold" to="/NewsSingle/">Läs nyhet</Link>
-		</div>
-		<div className="px-3 md:px-6 py-8 md:py-12 bg-blue"> 
+		</HeroNews>
+		<HeroEvent className="px-3 md:px-6 py-8 md:py-12 bg-blue"> 
 			<span className="text-grey-light mb-2 block">2019/08/18</span>
 			<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">Mikael Ahlerup – Led dig själv innan du leder andra</h3>
 			<Link className="text-white font-semibold" to="/EventSingle/">Gå till event</Link>
-		</div>
+		</HeroEvent>
 	 </div>
   </div>
 )
+
+const HeroNews = styled.div`
+	background: #123843;
+	transition:background 0.25s;
+	&:hover {
+		background: ${darken(0.02, '#123843')};
+	}
+`
+
+const HeroEvent = styled.div`
+	background: #1B4350;
+	transition:background 0.25s;
+	&:hover {
+		background: ${darken(0.02, '#1B4350')};
+	}
+`
 
 
 const HeroTitle = styled.h1`
