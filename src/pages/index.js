@@ -11,11 +11,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`Visithalland`]} />
     <LandingHero />
-    <div className="px-3 wrapper mb-12">
+    <div className="px-3 wrapper mb-8">
 		<AreaCollection />
 	</div>
-	<div className="px-3 wrapper mb-12">
-		<EventCollection title="Evenemang" />
+	<div className="mb-12 bg-grey-lighter py-8">
+		<div className="px-3 wrapper">
+			<EventCollection title="Evenemang" />
+		</div>
 	</div>
 	<div className="px-3 wrapper mb-12">
 		<NewsCollection title="Nyheter" />
