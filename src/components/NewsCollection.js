@@ -13,8 +13,6 @@ const NewsCollection = ({ title }) => (
 		<NewsListItem />
 		<NewsListItem />
 		<NewsListItem />
-		<NewsListItem />
-		<NewsListItem />
 	</React.Fragment>
 )
 
