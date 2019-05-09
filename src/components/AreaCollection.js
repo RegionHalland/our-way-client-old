@@ -1,17 +1,27 @@
-import React from "react"
-import AreaThumbnail from "./AreaThumbnail"
+import React from 'react'
+import AreaThumbnail from './AreaThumbnail'
+import { useAllAreas } from '../hooks/useAllAreas'
 
-const AreaCollection = () => (
-	<React.Fragment>
-		<span className="font-semibold text-lg block mb-2 text-blue-lighter">Välkommen.</span>
-		<h2 className="mb-6 md:text-3xl">Vad är du intresserad av?</h2>
-		<div className="flex flex-wrap -mx-4 md:-mx-6">
-			<div className="w-full md:w-4/12 mb-4">
-				<AreaThumbnail title="Kunskap" label="Läs mer om kunskap" excerpt="Ta del av gästundersökningar, statistik och annat som är bra att veta."/>
+const AreaCollection = () => {
+	const allAreas = useAllAreas()
+
+	return (
+		<React.Fragment>
+			<span className="font-semibold text-lg block mb-2 text-blue-lighter">Välkommen.</span>
+			<h2 className="mb-6 md:text-3xl">Vad är du intresserad av?</h2>
+			<div className="flex flex-wrap -mx-4 md:-mx-6">
+				{ allAreas.map(node => {
+					const { node: area } = node
+					return (
+						<div key={area.id} className="w-full md:w-4/12 mb-4">
+							<AreaThumbnail title={area.name} label={`Läs mer om ${area.slug}`} excerpt={area.description} path={area.path} />
+						</div>
+					)})
+				}
 			</div>
-		</div>
-	</React.Fragment>
-)
+		</React.Fragment>
+	)
+}
 
 
 
