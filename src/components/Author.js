@@ -5,13 +5,15 @@ import Img from 'gatsby-image/withIEPolyfill'
 const Author = ({ firstName, lastName, phoneNumber, workTitle, email, profileImage}) => (
 	<div className="flex-nowrap flex max-w-full">
 		<div className="h-24 w-24 bg-grey-light rounded-full mb-2">
-			<Img
-				fluid={profileImage.localFile.childImageSharp.fluid}
-				objectFit="cover"
-				objectPosition="50% 50%"
-				alt={profileImage.alt_text}
-				className="rounded-full">
-			</Img>
+			{profileImage &&
+				<Img
+					fluid={profileImage.localFile.childImageSharp.fluid}
+					objectFit="cover"
+					objectPosition="50% 50%"
+					alt={profileImage.alt_text}
+					className="rounded-full">
+				</Img>
+			}
 		</div>
 		<AuthorContentContainer className="px-2 md:px-3">
 			<span className="text-black font-semibold mb-1 block text-lg md:text-xl">{firstName} {lastName}</span>

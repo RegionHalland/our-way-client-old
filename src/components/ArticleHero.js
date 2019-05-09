@@ -3,14 +3,15 @@ import { Link } from "gatsby"
 
 import styled from 'styled-components'
 import { darken } from 'polished'
+import Moment from 'react-moment'
 
-const ArticleHero = ({title, date, link, label, image}) => (
+const ArticleHero = ({title, date, label, path}) => (
 	<HeroEvent className="py-8 md:py-12 bg-blue-dark">
 		<div className="wrapper">
 			<div className="px-3">
-				<span className="text-grey-light mb-2 block">{date}</span>
+				<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{date}</Moment></span>
 				<h1 className="font-semibold text-white md:text-5xl mb-4 leading-tight max-w-md">{title}</h1>
-				<Link className="text-white font-semibold" to="/EventSingle/">{label}</Link>
+				<Link className="text-white font-semibold" to={path}>{label}</Link>
 			</div>
 		</div>
 	</HeroEvent>
