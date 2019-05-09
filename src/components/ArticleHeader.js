@@ -1,4 +1,5 @@
-import React from "react"
+import React from 'react'
+import Img from 'gatsby-image/withIEPolyfill'
 
 const ArticleHeader = ({title, date, image}) => (
 	<React.Fragment>
@@ -8,8 +9,13 @@ const ArticleHeader = ({title, date, image}) => (
 				<h1 className="font-semibold text-white mb-4 leading-tight max-w-md md:text-5xl">{title}</h1>
 			</div>
 		</div>
-		<div className="h-64 py-32 bg-grey-light">
-			{/* TODO: Insert image if there is one */}
+		<div>
+			<Img
+				fluid={image.localFile.childImageSharp.fluid}
+				objectFit="cover"
+				objectPosition="50% 50%"
+				alt={image.alt_text}>
+			</Img>
 		</div>
 	</React.Fragment>
 )
