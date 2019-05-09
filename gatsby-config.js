@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Our Way`,
+    description: ``,
+    author: `@digitaliseringsbyran`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -80,7 +80,7 @@ module.exports = {
 
         // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
         // It can help you debug specific API Endpoints problems.
-        verboseOutput: true,
+        verboseOutput: false,
         // Set how many pages are retrieved per API request.
         perPage: 100,
         // Set how many simultaneous requests are sent at once.
