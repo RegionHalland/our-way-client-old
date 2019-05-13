@@ -15,7 +15,7 @@ const LandingHero = () => {
 
 	return (
 		<div className="flex flex-wrap mb-8">
-			<div className="w-full md:w-7/12 min-h-8 flex items-center px-3 py-6 relative">
+			<div className="w-full lg:w-7/12 min-h-8 flex items-center px-3 py-6 relative">
 				<HeroTitle className="text-3xl md:text-4xl leading-tight lg:text-5xl text-white z-10">{ ReactHtmlParser(heroTitle) }</HeroTitle>
 				<Img
 					fluid={background_image.localFile.childImageSharp.fluid}
@@ -26,19 +26,23 @@ const LandingHero = () => {
 					className="h-full w-full pin-l pin-t"
 				/>				
 			</div>
-			<div className="w-full md:w-5/12">
-				<HeroNews className="px-3 md:px-6 py-8 md:py-12 bg-blue-dark">
-					<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{ latestNewsArticle.date }</Moment></span>
-					<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">{ latestNewsArticle.title }</h3>
-					<Link className="text-white font-semibold" to={latestNewsArticle.path}>Läs nyhet</Link>
-				</HeroNews>
+			<div className="w-full lg:w-5/12 flex flex-wrap">
+					<Link className="w-full sm:w-6/12 lg:w-full no-underline" to={latestNewsArticle.path}>
+						<HeroNews className="px-3 md:px-6 py-8 md:py-12 bg-blue-dark">
+							<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{ latestNewsArticle.date }</Moment></span>
+							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">{ latestNewsArticle.title }</h3>
+							<span className="text-white font-semibold">Läs nyhet</span>
+						</HeroNews>
+					</Link>
 
-				{ /* TODO fetch on client/add dynamic data */ }
-				<HeroEvent className="px-3 md:px-6 py-8 md:py-12 bg-blue"> 
-					<span className="text-grey-light mb-2 block">2019/08/18</span>
-					<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">Mikael Ahlerup – Led dig själv innan du leder andra</h3>
-					<Link className="text-white font-semibold" to="/EventSingle/">Gå till event</Link>
-				</HeroEvent>
+					{ /* TODO fetch on client/add dynamic data */ }
+					<Link className="w-full sm:w-6/12 lg:w-full no-underline" to="/EventSingle/">
+						<HeroEvent className="px-3 md:px-6 py-8 md:py-12 bg-blue"> 
+							<span className="text-grey-light mb-2 block">2019/08/18</span>
+							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">Mikael Ahlerup – Led dig själv innan du leder andra</h3>
+							<span className="text-white font-semibold">Gå till event</span>
+						</HeroEvent>
+					</Link>
 			</div>
 		</div>
 	)
@@ -59,7 +63,6 @@ const HeroEvent = styled.div`
 		background: ${darken(0.02, '#1B4350')};
 	}
 `
-
 
 const HeroTitle = styled.h1`
 	@media(min-width:768px) {
