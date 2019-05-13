@@ -11,10 +11,10 @@ const Header = ({ siteTitle }) => {
 	return (
 		<header>
 			<div className="bg-blue">
-				<div className="py-1 md:py-2 px-3 wrapper flex md:justify-end">
+				<div className="py-2 md:py-2 px-3 wrapper flex md:justify-end">
 					{supportNavigationItems.map( item => {
 						return item.object === 'custom' ?
-							<a key={item.wordpress_id} className="mr-3 md:mr-0 md:ml-3 text-sm no-underline text-grey-light" href="https://www.visithalland.com/om-oss">{item.title}</a>
+							<a key={item.wordpress_id} className="mr-3 md:mr-0 md:ml-3 text-xs md:text-sm no-underline text-grey-light" href="https://www.visithalland.com/om-oss">{item.title}</a>
 							: <Link key={item.wordpress_id} activeClassName="text-white" className="mr-3 md:mr-0 md:ml-3 text-sm no-underline text-grey-light" to={item.object_slug}>{item.title}</Link>
 						})
 					}

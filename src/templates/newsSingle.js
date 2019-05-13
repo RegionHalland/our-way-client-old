@@ -50,11 +50,11 @@ const NewsSingle = ({ data: { wordpressWpNews: { title, date, featured_media, co
 		<Layout>
 			<SEO title="Nyhet" />
 			<ArticleHeader title={title} date={date} image={featured_media} />
-			<div className="px-3 wrapper flex flex-wrap justify-between pt-8 mb-8">
-				<div className="w-full lg:w-6/12 mb-8">
+			<div className="px-3 wrapper flex flex-wrap justify-between pt-6 mb-6 md:pt-8 md:mb-8">
+				<div className="w-full lg:w-6/12 mb-6 md:mb-8">
 					<ArticleContent content={content} />
 				</div>
-				<div className="w-full lg:w-5/12">
+				<div className="w-full lg:w-5/12 mb-4">
 					<h3 className="mb-4">Skrivet av </h3>
 					<Author email={email} phoneNumber={phone_number} firstName={first_name} lastName={last_name} profileImage={profile_image} workTitle={work_title} />
 				</div>

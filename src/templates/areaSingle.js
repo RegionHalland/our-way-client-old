@@ -42,11 +42,11 @@ const AreaSingle = ({
 		<AreaHero title={name} image={image} />
 		<div className="px-3 wrapper flex flex-wrap justify-between mb-8">
 			<div className="w-full lg:w-6/12">
-				<h2 className="mb-3">Om {name}</h2>
+				<h2 className="mb-3 text-base md:text-xl">Om <span className="lowercase">{name}</span></h2>
 				<ArticleContent content={description} />
 			</div>
 			<div className="w-full lg:w-5/12">
-				<h2 className="mb-4">Frågor? Kontakta oss.</h2>
+				<h2 className="mb-4 text-base md:text-xl">Frågor? Kontakta oss.</h2>
 				<Author />
 			</div>
 		</div>
