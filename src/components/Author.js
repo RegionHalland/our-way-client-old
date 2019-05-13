@@ -18,8 +18,8 @@ const Author = ({ firstName, lastName, phoneNumber, workTitle, email, profileIma
 		<AuthorContentContainer className="px-2 md:px-3">
 			<span className="text-black font-semibold mb-1 block text-lg md:text-xl">{firstName} {lastName}</span>
 			<span className="block mb-2">{workTitle}</span>
-			<a className="block mb-2 truncate" href={`mailto:${email}`}>{email}</a>
-			<a className="block mb-2 truncate" href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+			<a className="block mb-2 truncate text-blue" href={`mailto:${email}`}>{email}</a>
+			<a className="block mb-2 truncate text-blue" href={`tel:${phoneNumber}`}>{phoneNumber}</a>
 		</AuthorContentContainer>
 	</div>
 )

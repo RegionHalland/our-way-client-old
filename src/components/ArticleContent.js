@@ -10,11 +10,52 @@ const ArticleContent = ({content}) => (
 
 const ArticleContentInner = styled.div`
 	p {
-		
+		margin-bottom:0.75rem;
 	}
+	
+	figure {
+		img {
+			max-width:100%;
+			width:100%;
+			margin-bottom:0.25rem;
+			border-radius:4px;
+			vertical-align:bottom;
+		}
+		figcaption {
+			font-style:italic;
+			margin-bottom:1rem;
+		}
+	}
+
+	blockquote {
+		padding:1rem 0;
+		p {
+			font-size:1.75rem;
+			font-weight:bold;
+			line-height:1.25;
+		}
+		cite {
+			
+		}
+	}
+
+	.wp-block-embed__wrapper {
+		border-radius:5px;
+		overflow:hidden;
+		margin-bottom:1rem;
+	}
+
+	iframe {
+		max-width:100%;
+		width:100%;
+		vertical-align:bottom;
+	}
+
 
 	img {
 		max-width:100%;
+		width:100%;
+		border-radius:4px;
 		vertical-align:bottom;
 	}
 `
