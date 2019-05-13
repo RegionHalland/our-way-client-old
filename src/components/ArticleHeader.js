@@ -7,7 +7,7 @@ const ArticleHeader = ({title, date, image}) => (
 		<div className="px-3 py-6 md:py-8 bg-blue-dark">
 			<div className="wrapper">
 				<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{date}</Moment></span>
-				<h1 className="font-semibold text-white mb-4 leading-tight max-w-md text-2xl md:text-5xl">{title}</h1>
+				<h1 className="font-semibold text-white leading-tight max-w-md text-2xl md:text-5xl">{title}</h1>
 			</div>
 		</div>
 		{ image &&
