@@ -40,9 +40,9 @@ const AreaSingle = ({
 	<Layout>
 		<SEO title={name} />
 		<AreaHero title={name} image={image} />
-		<div className="px-3 wrapper flex flex-wrap justify-between mb-8">
-			<div className="w-full lg:w-6/12">
-				<h2 className="mb-3 text-base md:text-xl">Om <span className="lowercase">{name}</span></h2>
+		<div className="px-3 wrapper flex flex-wrap justify-between mb-6 md:mb-8">
+			<div className="w-full lg:w-6/12 mb-6">
+				<h2 className="mb-3 text-lg md:text-xl">Om <span className="lowercase">{name}</span></h2>
 				<ArticleContent content={description} />
 			</div>
 			<div className="w-full lg:w-5/12">

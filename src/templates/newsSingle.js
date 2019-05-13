@@ -55,7 +55,7 @@ const NewsSingle = ({ data: { wordpressWpNews: { title, date, featured_media, co
 					<ArticleContent content={content} />
 				</div>
 				<div className="w-full lg:w-5/12 mb-4">
-					<h3 className="mb-4">Skrivet av </h3>
+					<h3 className="mb-4 text-lg md:text-xl font-semibold">Skrivet av</h3>
 					<Author email={email} phoneNumber={phone_number} firstName={first_name} lastName={last_name} profileImage={profile_image} workTitle={work_title} />
 				</div>
 			</div>

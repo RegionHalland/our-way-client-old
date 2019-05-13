@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image/withIEPolyfill'
 
 const AreaHero = ({title, image}) => (
-	<div className="flex flex-wrap mb-8 md:flex-row-reverse">
+	<div className="flex flex-wrap mb-6 md:mb-8 md:flex-row-reverse">
 		<div className="w-full lg:w-7/12 bg-grey-lighter">
 			<Img
 				className="h-full"
