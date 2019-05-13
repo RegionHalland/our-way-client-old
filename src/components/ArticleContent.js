@@ -28,7 +28,9 @@ const ArticleContentInner = styled.div`
 	}
 
 	blockquote {
-		padding:1rem 0;
+		border-left:5px solid #B9D7E0;
+		padding-left:2rem;
+		margin: 2rem 0rem;
 		p {
 			font-size:1.75rem;
 			font-weight:bold;
