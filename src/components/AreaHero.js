@@ -14,12 +14,17 @@ const AreaHero = ({title, image}) => (
 			</Img>
 		</div>
 		<div className="w-full lg:w-5/12 bg-blue flex py-6 md:py-8 px-3 items-center">
-			<HeroTitle className="text-white text-2xl md:text-3xl lg:text-4xl break-words">{title}</HeroTitle>
+			<HeroInner>
+				<div className="mb-2 text-sm md:text-base font-semibold text-blue-lightest">
+					Område
+				</div>
+				<h1 className="text-white text-2xl md:text-3xl lg:text-4xl break-words">{title}</h1>
+			</HeroInner>
 		</div>
 	</div>
 )
 
-const HeroTitle = styled.h1`
+const HeroInner = styled.div`
 
 	@media(min-width:768px) {
 		padding-left: calc((100vw - 1240px)/2);
