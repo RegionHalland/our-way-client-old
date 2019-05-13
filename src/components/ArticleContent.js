@@ -10,7 +10,7 @@ const ArticleContent = ({content}) => (
 
 const ArticleContentInner = styled.div`
 	p {
-		margin-bottom:0.75rem;
+		margin-bottom:1.5rem;
 	}
 	
 	figure {
@@ -39,6 +39,10 @@ const ArticleContentInner = styled.div`
 		cite {
 			
 		}
+	}
+
+	h2 {
+		font-size:1.5rem;
 	}
 
 	.wp-block-embed__wrapper {

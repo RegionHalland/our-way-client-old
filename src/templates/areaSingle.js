@@ -12,6 +12,7 @@ export const query = graphql`
 			name
 			description
 			acf {
+				content
 				image {
 					localFile {
 						childImageSharp {
@@ -32,6 +33,7 @@ const AreaSingle = ({
 			name,
 			description,
 			acf: {
+				content,
 				image
 			}
 		}
@@ -43,7 +45,7 @@ const AreaSingle = ({
 		<div className="px-3 wrapper flex flex-wrap justify-between mb-6 md:mb-8">
 			<div className="w-full lg:w-6/12 mb-6">
 				<h2 className="mb-3 text-lg md:text-xl">Om <span className="lowercase">{name}</span></h2>
-				<ArticleContent content={description} />
+				<ArticleContent content={content} />
 			</div>
 			<div className="w-full lg:w-5/12">
 				<h2 className="mb-4 text-base md:text-xl">Frågor? Kontakta oss.</h2>
