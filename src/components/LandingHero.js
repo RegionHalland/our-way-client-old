@@ -16,7 +16,7 @@ const LandingHero = () => {
 	return (
 		<div className="flex flex-wrap mb-8">
 			<div className="w-full lg:w-7/12 min-h-8 flex items-center px-3 py-6 relative">
-				<HeroTitle className="text-3xl md:text-4xl leading-tight lg:text-5xl text-white z-10">{ ReactHtmlParser(heroTitle) }</HeroTitle>
+				<HeroTitle className="text-4xl leading-tight lg:text-5xl text-white z-10 max-w-md">{ ReactHtmlParser(heroTitle) }</HeroTitle>
 				<Img
 					fluid={background_image.localFile.childImageSharp.fluid}
 					objectFit="cover"
