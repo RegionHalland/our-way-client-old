@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { graphql } from 'gatsby'
 import Layout from '../layouts/Layout'
 import SEO from '../components/Seo'
 import AreaHero from '../components/AreaHero'
