@@ -13,6 +13,17 @@ export const query = graphql`
 			description
 			acf {
 				content
+				uploads { 
+					uploads_group {
+						title
+						files {
+							file {
+								wordpress_id
+								link
+							}
+						}
+					}
+				}
 				image {
 					localFile {
 						childImageSharp {
@@ -34,7 +45,8 @@ const AreaSingle = ({
 			description,
 			acf: {
 				content,
-				image
+				image,
+				uploads,
 			}
 		}
 	}
@@ -50,6 +62,21 @@ const AreaSingle = ({
 			<div className="w-full lg:w-5/12">
 				<h2 className="mb-4 text-base md:text-xl">Frågor? Kontakta oss.</h2>
 				<Author />
+
+				{ 
+					uploads.map(item =>
+						<React.Fragment key={item.uploads_group.title}>
+                  		<span className="block mb-3">{item.uploads_group.title}</span>
+                  			{ 
+								item.uploads_group.files.map(item =>
+									<React.Fragment>
+				                  		<span className="block">{item.file.link}</span>
+				                  	</React.Fragment>
+								)
+			                }
+			            </React.Fragment>
+					)
+                }
 			</div>
 		</div>
 	</Layout>
