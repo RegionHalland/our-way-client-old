@@ -23,15 +23,11 @@ export const query = graphql`
 								filename
 								filesize
 								name
-								description
 								subtype
 								link
 								url {
 					                id
-					                path
-					                slug
 					                localFile {
-					                  id
 					                  prettySize
 					                  publicURL
 					                }
