@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { darken } from 'polished'
 import Moment from 'react-moment'
 
-const ArticleHero = ({title, date, label, path}) => (
+const ArticleHero = ({ title, date, label, path }) => (
 	<HeroEvent className="py-8 md:py-12 bg-blue-dark block no-underline" to={path}>
 		<div className="wrapper">
 			<div className="px-3">
