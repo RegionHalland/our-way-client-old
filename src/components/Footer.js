@@ -28,14 +28,14 @@ const Footer = () => {
                   <h4 className="text-blue-lightest text-lg mb-4">Sidor</h4>
                   <ul className="list-reset">
                     { headerNavigationItems.map(item =>
-                      <li className="mb-3" key={item.wordpress_id}>
-                        <Link className="text-white text-lg font-semibold no-underline" activeClassName="text-blue-lightest" to={slugify(item.title, {lower: true})}>{item.title}</Link>
-                      </li>
-                      )
-                    }
+                        <li className="mb-3" key={item.wordpress_id}>
+                          <Link className="text-white text-lg font-semibold no-underline" activeClassName="text-blue-lightest" to={`/${slugify(item.title, {lower: true})}`}>{item.title}</Link>
+                        </li>
+                    )}
+
                     { supportNavigationItems.map(item =>
                       <li className="mb-3" key={item.wordpress_id}>
-                        <Link className="text-white text-lg font-semibold no-underline" activeClassName="text-blue-lightest" to={slugify(item.title, {lower: true})}>{item.title}</Link>
+                        <Link className="text-white text-lg font-semibold no-underline" activeClassName="text-blue-lightest" to={`/${slugify(item.title, {lower: true})}`}>{item.title}</Link>
                       </li>
                       )
                     }

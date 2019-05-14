@@ -6,7 +6,7 @@ const EventCollection = ({ events, title, showAllEventsLink }) => (
 	<React.Fragment>
 		<div className="flex justify-between items-center mb-6"> 
 			<h2 className="text-black md:text-3xl">{title}</h2>
-			{showAllEventsLink && <Link className="text-black font-semibold" to="evenemang">Alla events</Link>}
+			{showAllEventsLink && <Link className="text-black font-semibold" to="/evenemang">Alla events</Link>}
 		</div>
 		{events.length > 0 && events.map(event => 
 			<EventListItem 

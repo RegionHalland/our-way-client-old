@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => {
 					{supportNavigationItems.map( item => {
 						return item.object === 'custom' ?
 							<a key={item.wordpress_id} className="mr-3 md:mr-0 md:ml-3 text-sm no-underline text-grey-light" href="https://www.visithalland.com/om-oss">{item.title}</a>
-							: <Link key={item.wordpress_id} activeClassName="text-white" className="mr-3 md:mr-0 md:ml-3 text-sm no-underline text-grey-light" to={item.object_slug}>{item.title}</Link>
+							: <Link key={item.wordpress_id} activeClassName="text-white" className="mr-3 md:mr-0 md:ml-3 text-sm no-underline text-grey-light" to={`/${item.object_slug}`}>{item.title}</Link>
 						})
 					}
 				</div>
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
 					</Link>
 					<nav>
 						{ headerNavigationItems.map(item =>
-							<Link key={item.wordpress_id} activeClassName="text-blue-lighter" className="mr-6 md:mr-0 md:ml-6 text-black no-underline font-semibold" to={slugify(item.title, {lower: true})}>{item.title}</Link>)
+							<Link key={item.wordpress_id} activeClassName="text-blue-lighter" className="mr-6 md:mr-0 md:ml-6 text-black no-underline font-semibold" to={`/${slugify(item.title, { lower: true })}`}>{item.title}</Link>)
 						}
 					</nav>
 				</div>
