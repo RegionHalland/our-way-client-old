@@ -6,13 +6,13 @@ const EventInfo = ({ address, date, linkTitle, link }) => {
 	const splitAddress = address ? address.substr(0, address.lastIndexOf(',')) : 'Ej tillgängligt'
 	
 	return (
-		<div className="p-6 bg-grey-lighter sticky pin-t rounded">
+		<div className="sticky pin-t rounded">
 			<ul className="list-reset">
-				<li className="mb-6 text-lg">
+				<li className="mb-4 text-lg">
 					<span className="font-semibold mr-2">Plats:</span>
 					<span className="font-semibold">{splitAddress}</span>
 				</li>
-				<li className="mb-6 text-lg">
+				<li className="mb-4 text-lg">
 					<span className="font-semibold mr-2">Datum:</span>
 					<span className="font-semibold">
 						{date ? <Moment format="YYYY/MM/DD">{date}</Moment> : 'Ej tillgängligt'}

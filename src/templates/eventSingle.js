@@ -36,7 +36,7 @@ const EventSingle = ({ data: { wordpressWpEvent: { title, content, acf: { start_
 				<ArticleContent content={content} />
 			</div>
 			<div className="w-full lg:w-5/12">
-				<h3 className="mb-4">Information</h3>
+				<h3 className="mb-6">Information</h3>
 				<EventInfo
 					address={address}
 					date={start_date}
