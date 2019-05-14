@@ -10,7 +10,7 @@ import SEO from "../components/Seo"
 
 export const query = graphql`
 	query($now: Date) {
-		allWordpressWpEvent(filter: {acf: {start_date: {gte: $now }}} sort: {fields: acf___start_date} limit: 3) {
+		allWordpressWpEvent(filter: {acf: {start_date: {gte: $now }}} sort: {fields: acf___start_date} limit: 5) {
 			edges {
 				node {
 					id
@@ -25,7 +25,7 @@ export const query = graphql`
 	}
 `
 
-const IndexPage = ({ data, pageContext }) => {
+const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			<SEO title="Home" keywords={[`Visithalland`]} />
@@ -37,7 +37,7 @@ const IndexPage = ({ data, pageContext }) => {
 			
 			<div className="mb-12 bg-grey-lighter py-8">
 				<div className="px-3 wrapper">
-					<EventCollection title="Evenemang" />
+					<EventCollection title="Evenemang" events={data.allWordpressWpEvent.edges} />
 				</div>
 			</div>
 			
