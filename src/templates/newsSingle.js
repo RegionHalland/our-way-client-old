@@ -49,7 +49,7 @@ export const query = graphql`
 const NewsSingle = ({ data: { wordpressWpNews: { title, date, featured_media, content, author: { email, first_name, last_name, acf: { phone_number, work_title, profile_image } } } } }) => {
 	return (
 		<Layout>
-			<SEO title="Nyhet" />
+			<SEO title={title} />
 			<ArticleHeader title={title} date={date} image={featured_media} />
 			<div className="px-3 wrapper flex flex-wrap justify-between pt-6 mb-6 md:pt-8 md:mb-8">
 				<div className="w-full lg:w-6/12 mb-6 md:mb-8">
