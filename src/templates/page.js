@@ -1,6 +1,4 @@
 import React from "react"
-
-import NewsCollection from "../components/NewsCollection"
 import Layout from "../layouts/Layout"
 import SEO from "../components/Seo"
 import ArticleHero from "../components/ArticleHero"
