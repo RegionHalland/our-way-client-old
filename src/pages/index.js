@@ -37,7 +37,7 @@ const IndexPage = ({ data, pageContext }) => {
 			
 			<div className="mb-12 bg-grey-lighter py-8">
 				<div className="px-3 wrapper">
-					<EventCollection title="Evenemang" />
+					<EventCollection title="Evenemang" events={data.allWordpressWpEvent.edges} />
 				</div>
 			</div>
 			
