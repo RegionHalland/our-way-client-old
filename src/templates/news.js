@@ -18,7 +18,7 @@ const NewsPage = () => {
 		<Layout>
 			<SEO title="Nyheter" />
 			<ArticleHero title={title} label="Läs mer" date={date} path={path} />
-			<div className="px-3 pt-8 wrapper mb-12">
+			<div className="px-3 md:px-6 lg:px-3 pt-8 wrapper mb-12">
 				<NewsCollection title="Fler nyheter" />
 			</div>
 		</Layout>

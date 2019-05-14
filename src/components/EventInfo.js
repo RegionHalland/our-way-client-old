@@ -19,7 +19,7 @@ const EventInfo = ({ address, date, linkTitle, link }) => {
 					</span>
 				</li>
 				<li>
-					<a href={link} target="blank" rel="noopener noreferrer" className="inline-block no-underline text-white px-4 py-4 bg-blue rounded font-semibold">{linkTitle}</a>
+					<a href={link} target="blank" rel="noopener noreferrer" className="inline-block no-underline text-white px-5 py-4 bg-blue rounded-full font-semibold">{linkTitle}</a>
 				</li>
 			</ul>
 		</div>

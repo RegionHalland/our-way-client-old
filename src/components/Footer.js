@@ -11,7 +11,7 @@ const Footer = () => {
 
   return(
     <footer className="bg-blue-dark pt-8 pb-8 md:pb-16">
-        <div className="px-3 wrapper flex flex-wrap flex-col md:flex-row md:justify-between">
+        <div className="px-3 md:px-6 lg:px-3 wrapper flex flex-wrap flex-col md:flex-row md:justify-between">
           <Fade effect="fadeInUp" duration={500}>
           <div className="w-full md:w-4/12 mb-8">
             <Link className="no-underline text-white mb-3 block" to="/">

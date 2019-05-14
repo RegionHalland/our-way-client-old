@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ReactHtmlParser from 'react-html-parser'
 
 const ArticleContent = ({content}) => (
-	<ArticleContentInner className="text-grey-darkest leading-relaxed">
+	<ArticleContentInner className="text-grey-darkest leading-relaxed max-w-md">
 		{ ReactHtmlParser(content) }
 	</ArticleContentInner>
 )
@@ -32,9 +32,9 @@ const ArticleContentInner = styled.div`
 		padding-left:2rem;
 		margin: 2rem 0rem;
 		p {
-			font-size:1.75rem;
+			font-size:1.5rem;
 			font-weight:bold;
-			line-height:1.25;
+			line-height:1.4;
 		}
 		cite {
 			

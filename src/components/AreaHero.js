@@ -13,13 +13,13 @@ const AreaHero = ({title, description, image}) => (
 				alt={image.alt_text}>
 			</Img>
 		</div>
-		<div className="w-full lg:w-5/12 bg-blue flex py-6 md:py-8 px-3 items-center">
+		<div className="w-full lg:w-5/12 bg-blue flex py-6 md:py-8 px-3 md:px-6 lg:px-3 items-center">
 			<HeroInner>
 				<div className="mb-2 text-sm md:text-base font-semibold text-blue-lightest">
 					Område
 				</div>
 				<h1 className="text-white text-2xl md:text-3xl lg:text-4xl break-words mb-3">{title}</h1>
-				<p className="text-grey-light text-lg leading-normal pr-6 md:pr-8">{description}</p>
+				<p className="text-grey-light text-lg leading-normal pr-6 md:pr-8 max-w-sm">{description}</p>
 			</HeroInner>
 		</div>
 	</div>

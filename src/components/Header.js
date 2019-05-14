@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => {
 	return (
 		<header>
 			<div className="bg-blue">
-				<div className="py-2 md:py-2 px-3 wrapper flex md:justify-end">
+				<div className="py-2 md:py-2 px-3 md:px-6 lg:px-3 wrapper flex md:justify-end">
 					{supportNavigationItems.map( item => {
 						return item.object === 'custom' ?
 							<a key={item.wordpress_id} className="mr-3 md:mr-0 md:ml-3 text-sm no-underline text-grey-light" href="https://www.visithalland.com/om-oss">{item.title}</a>
@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => {
 				</div>
 			</div>
 			<div className="shadow-lg z-50 relative">
-				<div className="px-3 py-5 flex flex-col md:items-center md:flex-row md:justify-between wrapper">
+				<div className="px-3 md:px-6 lg:px-3 py-5 flex flex-col md:items-center md:flex-row md:justify-between wrapper">
 					<Link className="no-underline text-black mb-4 md:mb-0" to="/">
 						<h1 className="font-semibold text-xl">Visithalland.com</h1>
 					</Link>

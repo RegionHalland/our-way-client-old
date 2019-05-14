@@ -13,7 +13,7 @@ const AreaCollection = () => {
 				{ allAreas.map(node => {
 					const { node: area } = node
 					return (
-						<div key={area.id} className="w-full md:w-4/12 mb-4 px-3">
+						<div key={area.id} className="w-full md:w-6/12 lg:w-4/12 mb-4 px-3">
 							<AreaThumbnail title={area.name} label={`Läs mer om ${area.slug}`} excerpt={area.description} path={area.path} />
 						</div>
 					)})

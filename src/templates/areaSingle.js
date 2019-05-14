@@ -66,7 +66,7 @@ const AreaSingle = ({
 	<Layout>
 		<SEO title={name} />
 		<AreaHero title={name} description={description} image={image} />
-		<div className="px-3 wrapper flex flex-wrap justify-between mb-6 md:mb-8">
+		<div className="px-3 md:px-6 lg:px-3 wrapper flex flex-wrap justify-between mb-6 md:mb-8">
 			<div className="w-full lg:w-6/12 mb-6">
 				<h2 className="mb-3 text-lg md:text-xl">Om <span className="lowercase">{name}</span></h2>
 				<ArticleContent content={content} />
@@ -76,11 +76,13 @@ const AreaSingle = ({
 				<Author />
 			</div>
 		</div>
-		<div className="py-8 bg-grey-lighter">
-			<div className="wrapper px-3">
-				<AreaUploads uploads={uploads}/>
+		{ uploads &&
+			<div className="py-8 bg-grey-lighter">
+				<div className="wrapper px-3 md:px-6 lg:px-3">
+					<AreaUploads uploads={uploads}/> 
+				</div>
 			</div>
-		</div>
+		}
 	</Layout>
 )
 

@@ -37,7 +37,7 @@ const EventsPage = ({ data, pageContext }) => {
 				path={featuredEvent.node.path}
 				date={featuredEvent.node.acf.start_date} 
 			/>
-			<div className="px-3 pt-8 wrapper mb-12">
+			<div className="px-3 md:px-6 lg:px-3 pt-8 wrapper mb-12">
 				<EventCollection title="Kommande evenemang" events={restOfEvents} />
 			</div>
 		</Layout>

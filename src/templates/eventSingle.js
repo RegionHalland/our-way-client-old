@@ -31,7 +31,7 @@ const EventSingle = ({ data: { wordpressWpEvent: { title, content, acf: { start_
 	<Layout>
 		<SEO title={title} />
 		<ArticleHeader title={title} date={start_date} />
-		<div className="px-3 wrapper flex flex-wrap justify-between pt-6 md:pt-8 mb-8">
+		<div className="px-3 md:px-6 lg:px-3 wrapper flex flex-wrap justify-between pt-6 md:pt-8 mb-8">
 			<div className="w-full lg:w-6/12 mb-6 md:mb-8">
 				<ArticleContent content={content} />
 			</div>
