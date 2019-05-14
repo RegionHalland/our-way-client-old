@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby'
 
 import LandingHero from "../components/LandingHero"
 import AreaCollection from "../components/AreaCollection"
@@ -7,25 +8,44 @@ import NewsCollection from "../components/NewsCollection"
 import Layout from "../layouts/Layout"
 import SEO from "../components/Seo"
 
-const IndexPage = () => (
-	<Layout>
-		<SEO title="Home" keywords={[`Visithalland`]} />
-		<LandingHero />
-		
-		<div className="px-3 wrapper mb-8">
-			<AreaCollection />
-		</div>
-		
-		<div className="mb-12 bg-grey-lighter py-8">
-			<div className="px-3 wrapper">
-				<EventCollection title="Evenemang" />
+export const query = graphql`
+	query($now: Date) {
+		allWordpressWpEvent(filter: {acf: {start_date: {gte: $now }}} sort: {fields: acf___start_date} limit: 3) {
+			edges {
+				node {
+					id
+					title
+					path
+					acf {
+						start_date
+					}
+				}
+			}
+		}
+	}
+`
+
+const IndexPage = ({ data, pageContext }) => {
+	return (
+		<Layout>
+			<SEO title="Home" keywords={[`Visithalland`]} />
+			<LandingHero nextEvent={data.allWordpressWpEvent.edges[0].node} />
+			
+			<div className="px-3 wrapper mb-8">
+				<AreaCollection />
 			</div>
-		</div>
-		
-		<div className="px-3 wrapper mb-12">
-			<NewsCollection title="Nyheter" />
-		</div>
-	</Layout>
-)
+			
+			<div className="mb-12 bg-grey-lighter py-8">
+				<div className="px-3 wrapper">
+					<EventCollection title="Evenemang" />
+				</div>
+			</div>
+			
+			<div className="px-3 wrapper mb-12">
+				<NewsCollection title="Nyheter" />
+			</div>
+		</Layout>
+	)
+}
 
 export default IndexPage
