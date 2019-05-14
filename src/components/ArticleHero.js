@@ -11,7 +11,7 @@ const ArticleHero = ({title, date, label, path}) => (
 			<div className="px-3">
 				<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{date}</Moment></span>
 				<h1 className="font-semibold text-white md:text-5xl mb-4 leading-tight max-w-md">{title}</h1>
-				<span className="text-white font-semibold">{label}</span>
+				<span className="text-white font-semibold underline">{label}</span>
 			</div>
 		</div>
 	</HeroEvent>

@@ -31,7 +31,7 @@ const LandingHero = ({ nextEvent }) => {
 						<HeroNews className="px-3 w-full md:px-6 py-8 md:py-12 bg-blue-dark">
 							<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{ latestNewsArticle.date }</Moment></span>
 							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">{ latestNewsArticle.title }</h3>
-							<span className="text-white font-semibold">Läs nyhet</span>
+							<span className="text-white font-semibold underline">Läs nyhet</span>
 						</HeroNews>
 					</Link>
 
@@ -40,7 +40,7 @@ const LandingHero = ({ nextEvent }) => {
 						<HeroEvent className="px-3 w-full md:px-6 py-8 md:py-12 bg-blue"> 
 							<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{ nextEvent.acf.start_date }</Moment></span>
 							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">{ nextEvent.title }</h3>
-							<span className="text-white font-semibold">Gå till event</span>
+							<span className="text-white font-semibold underline">Gå till event</span>
 						</HeroEvent>
 					</Link>
 			</div>
