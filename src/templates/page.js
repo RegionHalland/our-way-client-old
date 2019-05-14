@@ -31,7 +31,7 @@ const Page = ({
 				</div>
 			</div>
 		</div>
-		<div className="px-3 pt-8 wrapper mb-12">
+		<div className="px-3 pt-6 md:pt-8 wrapper mb-8 md:mb-12">
 			<div className="w-full lg:w-6/12 mb-6 md:mb-8">
 				<ArticleContent content={content} />
 			</div>
