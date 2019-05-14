@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout'
 import SEO from '../components/Seo'
 import AreaHero from '../components/AreaHero'
 import ArticleContent from '../components/ArticleContent'
+import AreaUploads from '../components/AreaUploads'
 import Author from '../components/Author'
 
 export const query = graphql`
@@ -19,7 +20,22 @@ export const query = graphql`
 						files {
 							file {
 								wordpress_id
+								filename
+								filesize
+								name
+								description
+								subtype
 								link
+								url {
+					                id
+					                path
+					                slug
+					                localFile {
+					                  id
+					                  prettySize
+					                  publicURL
+					                }
+					              }
 							}
 						}
 					}
@@ -62,21 +78,11 @@ const AreaSingle = ({
 			<div className="w-full lg:w-5/12">
 				<h2 className="mb-4 text-base md:text-xl">Frågor? Kontakta oss.</h2>
 				<Author />
-
-				{ 
-					uploads.map(item =>
-						<React.Fragment key={item.uploads_group.title}>
-                  		<span className="block mb-3">{item.uploads_group.title}</span>
-                  			{ 
-								item.uploads_group.files.map(item =>
-									<React.Fragment>
-				                  		<span className="block">{item.file.link}</span>
-				                  	</React.Fragment>
-								)
-			                }
-			            </React.Fragment>
-					)
-                }
+			</div>
+		</div>
+		<div className="py-8 bg-grey-lighter">
+			<div className="wrapper px-3">
+				<AreaUploads uploads={uploads}/>
 			</div>
 		</div>
 	</Layout>
