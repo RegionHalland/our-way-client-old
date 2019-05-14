@@ -64,7 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
             path: slugify(item.title, { lower: true }),
             component: slash(templates[item.object]),
             context: {
-                id: item.object_id,
+                wordpress_id: item.object_id,
                 slug: item.object
             },
         })

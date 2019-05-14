@@ -1,18 +1,42 @@
 import React from "react"
 import Layout from "../layouts/Layout"
 import SEO from "../components/Seo"
-import ArticleHero from "../components/ArticleHero"
+import ArticleContent from "../components/ArticleContent"
 
-const Page = ({ pageContext }) => {
-  console.log("context", pageContext)
-  return (
-  <Layout>
-      <SEO title="Page" />
-      <ArticleHero title="Page" label="Läs mer" date="27/09/19" />
-      <div className="px-3 pt-8 wrapper mb-12">
-        <h1>{ pageContext.id }</h1>
-      </div>
-  </Layout>
-)}
+export const query = graphql`
+	query($wordpress_id: Int!) {
+		wordpressPage (wordpress_id: {eq: $wordpress_id}) {
+			slug
+			title
+			content
+		}
+	}
+`
+
+const Page = ({
+	pageContext,
+	data: { 
+		wordpressPage: { 
+			title,
+			content,
+		}
+	}
+}) => (
+	  <Layout>
+		<SEO title={title} />
+		<div className="py-8 md:py-12 bg-blue-dark block no-underline">
+			<div className="wrapper">
+				<div className="px-3">
+					<h1 className="font-semibold text-white md:text-5xl mb-4 leading-tight max-w-md">{title}</h1>
+				</div>
+			</div>
+		</div>
+		<div className="px-3 pt-8 wrapper mb-12">
+			<div className="w-full lg:w-6/12 mb-6 md:mb-8">
+				<ArticleContent content={content} />
+			</div>
+		</div>
+	  </Layout>
+)
 
 export default Page
