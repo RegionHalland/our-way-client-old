@@ -27,8 +27,8 @@ const LandingHero = ({ nextEvent }) => {
 				/>				
 			</div>
 			<div className="w-full lg:w-5/12 flex flex-wrap">
-					<Link className="w-full sm:w-6/12 lg:w-full no-underline" to={latestNewsArticle.path}>
-						<HeroNews className="px-3 md:px-6 py-8 md:py-12 bg-blue-dark">
+					<Link className="w-full flex sm:w-6/12 lg:w-full no-underline" to={latestNewsArticle.path}>
+						<HeroNews className="px-3 w-full md:px-6 py-8 md:py-12 bg-blue-dark">
 							<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{ latestNewsArticle.date }</Moment></span>
 							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">{ latestNewsArticle.title }</h3>
 							<span className="text-white font-semibold">Läs nyhet</span>
@@ -36,8 +36,8 @@ const LandingHero = ({ nextEvent }) => {
 					</Link>
 
 					{ /* TODO fetch on client/add dynamic data */ }
-					<Link className="w-full sm:w-6/12 lg:w-full no-underline" to={nextEvent.path}>
-						<HeroEvent className="px-3 md:px-6 py-8 md:py-12 bg-blue"> 
+					<Link className="w-full flex sm:w-6/12 lg:w-full no-underline" to={nextEvent.path}>
+						<HeroEvent className="px-3 w-full md:px-6 py-8 md:py-12 bg-blue"> 
 							<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{ nextEvent.acf.start_date }</Moment></span>
 							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">{ nextEvent.title }</h3>
 							<span className="text-white font-semibold">Gå till event</span>

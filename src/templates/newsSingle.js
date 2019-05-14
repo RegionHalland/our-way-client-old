@@ -13,6 +13,7 @@ export const query = graphql`
 			title
 			slug
 			content
+			date
 			author {
 				email
 				first_name
