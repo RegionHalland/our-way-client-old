@@ -9,7 +9,7 @@ import Moment from 'react-moment'
 import { useThemeOptions } from '../hooks/useThemeOptions'
 import { useLatestNewsArticle } from '../hooks/useLatestNewsArticle'
 
-const LandingHero = () => {
+const LandingHero = ({ nextEvent }) => {
 	const { title: heroTitle, background_image } = useThemeOptions()
 	const { node: latestNewsArticle } = useLatestNewsArticle()
 
@@ -36,10 +36,10 @@ const LandingHero = () => {
 					</Link>
 
 					{ /* TODO fetch on client/add dynamic data */ }
-					<Link className="w-full sm:w-6/12 lg:w-full no-underline" to="/EventSingle/">
+					<Link className="w-full sm:w-6/12 lg:w-full no-underline" to={nextEvent.path}>
 						<HeroEvent className="px-3 md:px-6 py-8 md:py-12 bg-blue"> 
-							<span className="text-grey-light mb-2 block">2019/08/18</span>
-							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">Mikael Ahlerup – Led dig själv innan du leder andra</h3>
+							<span className="text-grey-light mb-2 block"><Moment format="YYYY/MM/DD">{ nextEvent.acf.start_date }</Moment></span>
+							<h3 className="text-2xl font-semibold text-white mb-4 leading-tight max-w-sm">{ nextEvent.title }</h3>
 							<span className="text-white font-semibold">Gå till event</span>
 						</HeroEvent>
 					</Link>

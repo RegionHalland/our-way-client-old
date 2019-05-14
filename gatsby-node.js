@@ -174,3 +174,20 @@ exports.createPages = async ({ graphql, actions }) => {
     
 
 }
+
+// Pass Date to page context, used in graphql queries for events
+// https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#pass-context-to-pages
+const now = new Date().toISOString().substring(0, 10)
+
+exports.onCreatePage = ({ page, actions }) => {
+    const { createPage, deletePage } = actions
+
+    deletePage(page)
+    createPage({
+        ...page,
+        context: {
+            ...page.context,
+            now: now,
+        },
+    })
+}
