@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Reveal'
 import styled from 'styled-components'
 import Moment from 'react-moment'
 
-const EventListItem = ({date, title}) => (
+const EventListItem = ({ title, date, link }) => (
 	<Fade effect="fadeInUp" duration={500}>
 		<div className="flex flex-wrap w-full py-6 mb-2 items-center">
 			<div className="mb-3 md:mb-0 w-full md:w-1/12">
@@ -12,11 +12,11 @@ const EventListItem = ({date, title}) => (
 			</div>
 			<div className="mb-3 md:mb-0 w-full md:w-8/12">
 				<h3 className="text-xl md:text-2xl leading-normal">
-					<StyledLink className="no-underline text-black" to="/EventSingle/">{title}</StyledLink>
+					<StyledLink className="no-underline text-black" to={link}>{title}</StyledLink>
 				</h3>
 			</div>
 			<div className="mb-3 md:mb-0 w-full md:w-3/12 md:text-right">
-				<Link className="text-black font-semibold" to="/EventSingle/">Gå till event</Link>
+				<Link className="text-black font-semibold" to={link}>Gå till event</Link>
 			</div>
 		</div>
 	</Fade>
