@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image/withIEPolyfill'
 
-const AreaHero = ({title, image}) => (
+const AreaHero = ({title, description, image}) => (
 	<div className="flex flex-wrap mb-6 md:mb-8 md:flex-row-reverse">
 		<div className="w-full lg:w-7/12 bg-grey-lighter">
 			<Img
@@ -18,7 +18,8 @@ const AreaHero = ({title, image}) => (
 				<div className="mb-2 text-sm md:text-base font-semibold text-blue-lightest">
 					Område
 				</div>
-				<h1 className="text-white text-2xl md:text-3xl lg:text-4xl break-words">{title}</h1>
+				<h1 className="text-white text-2xl md:text-3xl lg:text-4xl break-words mb-3">{title}</h1>
+				<p className="text-grey-light text-lg leading-normal pr-6 md:pr-8">{description}</p>
 			</HeroInner>
 		</div>
 	</div>
