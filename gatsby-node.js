@@ -8,6 +8,7 @@
 const slugify = require('slugify')
 const path = require('path')
 const slash = require('slash')
+const now = new Date().toISOString().substring(0, 10)
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
@@ -65,7 +66,8 @@ exports.createPages = async ({ graphql, actions }) => {
             component: slash(templates[item.object]),
             context: {
                 wordpress_id: item.object_id,
-                slug: item.object
+                slug: item.object,
+                now: now,
             },
         })
     })
@@ -177,8 +179,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
 // Pass Date to page context, used in graphql queries for events
 // https://www.gatsbyjs.org/docs/creating-and-modifying-pages/#pass-context-to-pages
-const now = new Date().toISOString().substring(0, 10)
-
 exports.onCreatePage = ({ page, actions }) => {
     const { createPage, deletePage } = actions
 
