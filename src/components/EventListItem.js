@@ -8,7 +8,7 @@ const EventListItem = ({date, title}) => (
 	<Fade effect="fadeInUp" duration={500}>
 		<div className="flex flex-wrap w-full py-6 mb-2 items-center">
 			<div className="mb-3 md:mb-0 w-full md:w-1/12">
-				<span className="text-lg font-semibold"><Moment format="YYYY/MM/DD">{date}</Moment></span>
+				<span className="text-lg font-semibold"><Moment format="DD/MM">{date}</Moment></span>
 			</div>
 			<div className="mb-3 md:mb-0 w-full md:w-8/12">
 				<h3 className="text-xl md:text-2xl leading-normal">
