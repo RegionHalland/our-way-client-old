@@ -23,16 +23,14 @@ export const query = graphql`
 	}
 `
 
-const EventsPage = ({ data, pageContext }) => {
-	console.log(pageContext)
-	return (
-  <Layout>
-    <SEO title="Evenemang" />
-    <ArticleHero title="Workshop för Skördetid i Halland" label="Gå till event" date="27/09/19" />
-	<div className="px-3 pt-8 wrapper mb-12">
-		<EventCollection title="Kommande evenemang" events={data.allWordpressWpEvent.edges} />
-	</div>
-  </Layout>
-)}
+const EventsPage = ({ data, pageContext }) => (
+	<Layout>
+		<SEO title="Evenemang" />
+		<ArticleHero title="Workshop för Skördetid i Halland" label="Gå till event" date="27/09/19" />
+		<div className="px-3 pt-8 wrapper mb-12">
+			<EventCollection title="Kommande evenemang" events={data.allWordpressWpEvent.edges} />
+		</div>
+	</Layout>
+)
 
 export default EventsPage
