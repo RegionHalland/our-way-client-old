@@ -41,8 +41,26 @@ const ArticleContentInner = styled.div`
 		}
 	}
 
+	a {
+		word-break: break-all;
+	}
+
 	h2 {
 		font-size:1.25rem;
+		line-height:1.25;
+		margin-bottom:1rem;
+	}
+
+	h3 {
+		font-size:1.15rem;
+		line-height:1.25;
+		margin-bottom:1rem;
+	}
+
+	h4 {
+		font-size:1rem;
+		line-height:1.25;
+		margin-bottom:1rem;
 	}
 
 	.wp-block-embed__wrapper {
