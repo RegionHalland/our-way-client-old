@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 
 import Layout from "../layouts/Layout"
 import SEO from "../components/Seo"
@@ -9,7 +9,7 @@ import ArticleContent from "../components/ArticleContent"
 
 export const query = graphql`
 	query($slug: String = "lorem-dolor-sit-amet") {
-		wordpressWpEvent(slug: { eq: $slug } ) {
+		wordpressWpEvent(slug: { eq: $slug }) {
 			wordpress_id
 			title
 			content
@@ -18,7 +18,7 @@ export const query = graphql`
 					title
 					url
 				}
-				start_date,
+				start_date
 				location {
 					address
 				}
@@ -27,7 +27,19 @@ export const query = graphql`
 	}
 `
 
-const EventSingle = ({ data: { wordpressWpEvent: { title, content, acf: { start_date, location: { address }, application_link } } } }) => (
+const EventSingle = ({
+	data: {
+		wordpressWpEvent: {
+			title,
+			content,
+			acf: {
+				start_date,
+				location: { address },
+				application_link,
+			},
+		},
+	},
+}) => (
 	<Layout>
 		<SEO title={title} />
 		<ArticleHeader title={title} date={start_date} />
@@ -40,8 +52,8 @@ const EventSingle = ({ data: { wordpressWpEvent: { title, content, acf: { start_
 				<EventInfo
 					address={address}
 					date={start_date}
-					linkTitle={application_link.title}
-					link={application_link.url}
+					linkTitle={application_link && application_link.title}
+					link={application_link && application_link.url}
 				/>
 			</div>
 		</div>
